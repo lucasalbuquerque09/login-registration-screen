@@ -199,7 +199,9 @@ body::before {
 
 
 .group-element input:focus~label,
-.group-element input:not(:placeholder-shown)~label {
+.group-element input:not(:placeholder-shown)~label,
+.group-element input:-webkit-autofill~label,
+.group-element.has-value label {
     top: -10px;
     left: 10px;
     font-size: 13px;
