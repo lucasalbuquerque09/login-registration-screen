@@ -1,0 +1,309 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* estilo global */
+body {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a,
+button,
+input,
+i {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shafow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 1000px transparent inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+body::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #28333E;
+    background-image: url(../img/backgroud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+/* cabeçalho */
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.cabecalho img {
+    display: block;
+    width: 100px;
+    pointer-events: none;
+}
+
+.menu-descktop ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+
+.menu-descktop ul li a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #FFF;
+}
+
+.menu-descktop ul li a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background-color: #FFF;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.menu-descktop ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.box-button {
+    display: flex;
+    gap: 20px;
+}
+
+.box-button button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #ffffffa8;
+    outline: none;
+    border-radius: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.box-button button.active {
+    background-color: #FFF;
+    outline: none;
+}
+
+/* formulário principal */
+.main-form {
+    position: relative;
+    width: 450px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-form .box-form.registration {
+    transition: transform .30s ease;
+    position: absolute;
+    transform: translateX(500px);
+}
+
+.main-form.main-active .box-form.registration {
+    transition: transform .30s ease;
+    transform: translateX(0);
+}
+
+.main-form.main-active .box-form.login {
+    transition: transform .30s ease;
+    transform: translateX(-500px);
+}
+
+.main-form .box-form.login {
+    transition: transform .30s ease;
+    transform: translateX(0);
+}
+
+.box-form {
+    width: 100%;
+    padding: 40px 10px;
+}
+
+.main-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.group-element {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 30px 0;
+}
+
+.group-element input {
+    background-color: #ffffff42;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0 35px 0 20px;
+    font-size: 16px;
+}
+
+.group-element label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    letter-spacing: 1px;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.664);
+    transition: all 0.4s ease;
+}
+
+
+.group-element input:focus~label,
+.group-element input:valid~label {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    transform: translateY(0);
+    padding: 0 5px;
+    background-color: transparent;
+}
+
+.group-element i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.btn-form {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffffab;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .5s ease-in;
+}
+
+.btn-form:hover {
+    background-color: #FFF;
+}
+
+/* lembrar e esquecer */
+.remenber-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.remenber-forgot label {
+    color: #FFF;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.remenber-forgot a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.remenber-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* continuar com login social */
+.box-continue {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.box-continue div {
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+.box-continue span {
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social img {
+    width: 30px;
+}
+
+/* responsivo */
+@media (max-width: 1023px) {
+    .cabecalho {
+        padding: 0px 3%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .cabecalho img {
+        width: 80px;
+    }
+}
