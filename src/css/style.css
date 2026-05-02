@@ -14,6 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 110px 16px 30px;
+    overflow-x: hidden;
 }
 
 a,
@@ -27,8 +29,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shafow: 0 0 0 1000px transparent inset !important;
-    box-shadow: 0 0 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.20) inset !important;
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.20) inset !important;
+    -webkit-text-fill-color: #fff;
     transition: background-color 9999s ease-in-out 0s;
 }
 
@@ -124,7 +127,7 @@ body::before {
 /* formulário principal */
 .main-form {
     position: relative;
-    width: 450px;
+    width: min(450px, 100%);
     height: auto;
     display: flex;
     justify-content: center;
