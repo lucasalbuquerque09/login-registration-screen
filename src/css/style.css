@@ -29,9 +29,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.20) inset !important;
-    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.20) inset !important;
-    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: black !important;
     transition: background-color 9999s ease-in-out 0s;
 }
 
@@ -186,6 +186,7 @@ body::before {
     border-radius: 20px;
     padding: 0 35px 0 20px;
     font-size: 16px;
+    color: black;
 }
 
 .group-element label {
